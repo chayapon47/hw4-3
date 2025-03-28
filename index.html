@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบจัดการตารางนัดหมาย</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8 bg-gray-100">
+    <div class="max-w-lg mx-auto bg-blue-500 p-4 rounded-t-lg text-white">
+        <h1 class="text-center text-xl font-bold">ระบบจัดการตารางนัดหมาย</h1>
+    </div>
+    <div class="max-w-lg mx-auto bg-white p-4 rounded-b-lg shadow-md">
+        <h2 class="text-xl font-bold mb-2">การนัดหมายของวันพรุ่งนี้</h2>
+        <ul id="upcomingAppointments" class="bg-gray-100 p-2 rounded-lg"></ul>
+        <h2 class="text-xl font-bold mt-4">เพิ่มการนัดหมาย</h2>
+        <div class="bg-gray-100 max-w-lg p-2 mt-2 rounded-lg">
+            <label for="" class="font-bold">หัวข้อการนัดหมาย</label>
+            <input id="title" type="text" placeholder="หัวข้อการนัดหมาย" class="mt-2 w-full p-2 border rounded-lg mb-2">
+            <label for="" class="font-bold">วัน/เดือน/ปี</label>
+            <input id="date" type="date" class="mt-2 w-full p-2 border rounded-lg mb-2">
+            <label for="" class="font-bold">เวลาเริ่มต้น</label>
+            <input id="startTime" type="time" class="mt-2 w-full p-2 border rounded-lg mb-2">
+            <label for="" class="font-bold">เวลาสิ้นสุด</label>
+            <input id="endTime" type="time" class="mt-2 w-full p-2 border rounded-lg mb-4">
+            <button type="button" onclick="createAppointment()" class="w-full bg-blue-500 text-white p-2 rounded-lg">บันทึก</button>
+        </div>
+        <h2 class="text-xl font-bold mt-4">ตารางนัดหมาย</h2>
+        <ul id="appointmentsList" class="mt-2 bg-gray-100 rounded-lg p-2"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
